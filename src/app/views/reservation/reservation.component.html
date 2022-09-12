@@ -1,0 +1,70 @@
+<section class="sample-page">
+    <div class="container" data-aos="fade-up">
+      <div class="col-lg-12">
+        <img src="assets/img/pazardzhik2.jpg" alt="" class="pricing-img">
+      </div>
+
+      <h3>Информация за играта</h3>
+      <form [formGroup]="reservationForm" (ngSubmit)="reserve()" method="post">
+        <div class="col-lg-12">
+
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <select name="duration" id="duration" form="carform" class="form-control" placeholder="Времетраене: " formControlName="duration">
+                <option value="" disabled selected>Колко време ще отделиш?</option>
+                <option value="60" [attr.selected]="duration == 60 ? true : null">Скоростна 🏃🏻 (60 минути)</option>
+                <option value="90" [attr.selected]="duration == 90 ? true : null">Стандартна 😀 (90 минути)</option>
+                <option value="120" [attr.selected]="duration == 120 ? true : null">Предизвикателна 😅 (120 минути)</option>
+              </select>
+            </div>
+            <div class="col-md-6 form-group mt-3 mt-md-0">
+              <input type="number" class="form-control" name="people" id="people" [value]="people" formControlName="people" placeholder="Колко човека е твоят отбор? (мин. 6)" min="6" required>
+            </div>
+          </div>
+          <div class="form-group mt-3">
+            <select name="duration" id="duration" form="carform" class="form-control" placeholder="Времетраене: " formControlName="gameType">
+              <option value="" disabled selected>Коя игра ще избереш?</option>
+              <option value="prepared" [attr.selected]="gameType === 'prepared' ? true : null">Готова игра</option>
+              <option value="custom" [attr.selected]="gameType === 'custom' ? true : null">Игра на моя тема (доп. заплащане)</option>
+            </select>
+          </div>
+        </div>
+
+        <h3 class="margin-top-1rem">Дата и час</h3>
+
+        <div class="col-lg-12">
+
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <input type="date" class="form-control" id="date" name="date" formControlName="date">
+            </div>
+            <div class="col-md-6 form-group">
+              <input type="time" class="form-control" id="time" name="time" required formControlName="time">
+            </div>
+          </div>
+        </div>
+
+
+        <h3 class="margin-top-1rem">Лични данни</h3>
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-md-12 form-group mt-3 mt-md-0">
+              <input type="name" class="form-control" name="name" id="name" placeholder="Как се казваш?" required formControlName="name">
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-6 form-group mt-3 mt-md-0">
+              <input type="phone" class="form-control" name="phone" id="phone" placeholder="Телефонен номер "
+                required formControlName="phoneNumber">
+            </div>
+            <div class="col-md-6 form-group mt-3 mt-md-0">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Дай ни един email"
+                required formControlName="email">
+            </div>
+          </div>
+          <div class="text-center"><button class="pricing-form-button" type="submit">Запази</button></div>
+        </div>
+      </form>
+      <h4 class="text-center margin-top-1rem" *ngIf="!hidden">Код на резервацията: {{ reservationId }}</h4>
+    </div>
+  </section>

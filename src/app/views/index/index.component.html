@@ -1,0 +1,525 @@
+<!-- ======= Hero Section ======= -->
+<section id="home" class="hero">
+    <div class="container position-relative">
+      <div class="row gy-5" data-aos="fade-in">
+        <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
+          <h2>Чака те <span>зад ъгъла...</span></h2>
+          <p>Твоята следваща градска ескейп игра те чака зад ъгъла. Нашите игри в град Пазарджик ще те впуснат в преследване на улики заедно с твоя отбор за едно незабравимо преживяване.</p>
+          <div class="d-flex justify-content-center justify-content-lg-start">
+            <a [routerLink]="['/reservation']" class="btn-get-started">Запази</a>
+            <!-- <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Кои сме ние?</span></a> -->
+          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2">
+          <img src="assets/img/homepage-main.png" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="100">
+        </div>
+      </div>
+    </div>
+
+    <div class="icon-boxes position-relative">
+      <div class="container position-relative">
+        <div class="row gy-4 mt-5">
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon-box">
+              <div class="icon"><i class="fa-solid fa-people-group"></i></div>
+              <h4 class="title color-white">Ти и твоят отбор</h4>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box">
+              <div class="icon"><i class="fa-solid fa-brain"></i></div>
+              <h4 class="title color-white">Ти и твоите знания</h4>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box">
+              <div class="icon"><i class="fa-solid fa-hand"></i></div>
+              <h4 class="title color-white">Ти и твоите лимите</h4>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon-box">
+              <div class="icon"><i class="fa-solid fa-route"></i></div>
+              <h4 class="title color-white">Ти и твоето приключение</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main id="main">
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>За нас</h2>
+          <p>Нашата цел е да създадем общност от ентусиасти, запалени по градските куестове в Пазарджик.</p>
+        </div>
+        <div class="row gy-4">
+          <div class="col-lg-6">
+            <h3>За пръв път игри от този тип в нашия град</h3>
+            <img src="assets/img/aboutus-1.jpg" class="img-fluid rounded-4 mb-4" alt="">
+            <p></p>
+            <p>В забързаното ни ежедневие доста често подминаваме места в града ни, които определено имат своята важност.
+              Именно заради това нашите игри ще ти помогнат да опознаеш по-добре Пазарджик и ще те заведат на места, които
+              не си предполагал, че съществуват.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <div class="content ps-0 ps-lg-5">
+              <p class="fst-italic">
+                Предизвикваме те да излезеш от вкъщи, да събереш отбора и заедно да преживеете момента. Ние сме правилния избор ако си/сте: 
+              </p>
+              <ul>
+                <li><i class="bi bi-check-circle-fill"></i> Съученици и искате по-различна ваканция</li>
+                <li><i class="bi bi-check-circle-fill"></i> Голям или малък колектив и търсите тиймбилдинг</li>
+                <li><i class="bi bi-check-circle-fill"></i> Посетители на нашия град и искате да го опознаете</li>
+                <li><i class="bi bi-check-circle-fill"></i> Просто скучаещ</li>
+              </ul>
+              <p>В рамките на 60, 90 или 120 минути ще работиш рамо до рамо с твоите приятели, докато посещавате кътчета в Пазарджик, които остават често незабелязани.</p>
+              <div class="position-relative mt-4">
+                <img src="assets/img/aboutus-2.jpg" class="img-fluid rounded-4" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="reserve-now" class="call-to-action">
+      <div class="container text-center" data-aos="zoom-out">
+        <h3>Пазарджик е пълен с улики</h3>
+        <p> Нашите загадки може да са скрити навсякъде около теб! Само се поогледай 👀</p>
+        <a class="cta-btn" [routerLink]="['/reservation']">Резервирай игра</a>
+      </div>
+    </section>
+    
+    <section id="services" class="services sections-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Какво ти предлагаме</h2>
+          <p>Предлагаме ти следното, заедно с градските ни ескейп игри:</p>
+        </div>
+
+        <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item  position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-handshake"></i>
+              </div>
+              <h3>Безплатна среща</h3>
+              <p> Ще се срещнем с теб изцяло безплатно преди играта, за да обсъдим условията и да предложим оферта.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-circle-info"></i>
+              </div>
+              <h3>С вас по всяко време</h3>
+              <p>Екипът ни ще следи играта ви както дистанционно, така и присъствено през цялото време.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-child-reaching"></i>
+              </div>
+              <h3>Специално за теб</h3>
+              <p>Освен избора от игри, които предлагаме, бихме могли да създадем нещо специално за отбора ти на избрана от теб тема.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Portfolio Section =======
+    <section id="portfolio" class="portfolio sections-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Нашите игри</h2>
+          <p>Потопи се в атмосферата на един различен свят, изпълнен със загадки и улики. </p>
+        </div>
+
+        <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="row gy-4 portfolio-container">
+
+            <div class="col-xl-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <img src="assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4><a href="portfolio-details.html" title="More Details">Halloween</a></h4>
+                  <p>Потопи се в духа на Вси светии</p>
+                </div>
+              </div>
+            </div><End Portfolio Item 
+
+            <div class="col-xl-4 col-md-6 portfolio-item filter-product">
+              <div class="portfolio-wrap">
+                <img src="assets/img/portfolio/product-1.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4><a href="portfolio-details.html" title="More Details">Halloween</a></h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item 
+
+            <div class="col-xl-4 col-md-6 portfolio-item filter-branding">
+              <div class="portfolio-wrap">
+                <img src="assets/img/portfolio/branding-1.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4><a href="portfolio-details.html" title="More Details">St. Patrick's day</a></h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item
+
+          </div>End Portfolio Container
+
+        </div>
+
+      </div>
+    </section> End Portfolio Section 
+
+    ======= Recent Blog Posts Section =======
+    <section id="recent-posts" class="recent-posts sections-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Новости</h2>
+          <p>Свежият ни екип непрекъснато планира нови събития и промоционални пакети, които да споделим заедно с теб.</p>
+        </div>
+
+        <div class="row gy-4">
+
+          <div class="col-xl-4 col-md-6">
+            <article>
+
+              <div class="post-img">
+                <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
+              </div>
+
+              <p class="post-category">Politics</p>
+
+              <h2 class="title">
+                <a href="blog-details.html">Dolorum optio tempore voluptas dignissimos</a>
+              </h2>
+
+            </article>
+          </div><!-- End post list item
+
+          <div class="col-xl-4 col-md-6">
+            <article>
+
+              <div class="post-img">
+                <img src="assets/img/blog/blog-2.jpg" alt="" class="img-fluid">
+              </div>
+
+              <p class="post-category">Sports</p>
+
+              <h2 class="title">
+                <a href="blog-details.html">Nisi magni odit consequatur autem nulla dolorem</a>
+              </h2>
+
+            </article>
+          </div><!-- End post list item
+
+          <div class="col-xl-4 col-md-6">
+            <article>
+
+              <div class="post-img">
+                <img src="assets/img/blog/blog-3.jpg" alt="" class="img-fluid">
+              </div>
+
+              <p class="post-category">Entertainment</p>
+
+              <h2 class="title">
+                <a href="blog-details.html">Possimus soluta ut id suscipit ea ut in quo quia et soluta</a>
+              </h2>
+
+            </article>
+          </div><!-- End post list item 
+
+        </div><!-- End recent posts list 
+
+      </div>
+    </section>End Recent Blog Posts Section -->
+
+    <!-- ======= Our Team Section ======= -->
+    <section id="team" class="team">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Кои сме ние</h2>
+          <p>Трима луди, които точно като теб обичат Пазарджик, обичат загадките и предизвикателствата.</p>
+        </div>
+
+        <div class="row gy-3 justify-center">
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="member">
+              <img src="assets/img/team/aya.jpg" class="img-fluid" alt="">
+              <h4>Ая Кожухарова</h4>
+              <span>г-ца Дизайнер</span>
+              <div class="social">
+                <a href="https://www.facebook.com/profile.php?id=100009976320813"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/n_kcuf/"><i class="bi bi-instagram"></i></a>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="member">
+              <img src="assets/img/team/nikolay.jpg" class="img-fluid" alt="">
+              <h4>Николай Стоянов</h4>
+              <span>Бекстейдж човека</span>
+              <div class="social">
+                <a href="https://www.facebook.com/nikistoyanov05/"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/nikolaj.stojanov/"><i class="bi bi-instagram"></i></a>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <img src="assets/img/team/viktor.jpg" class="img-fluid" alt="">
+              <h4>Виктор Вукев</h4>
+              <span>Нинджата</span>
+              <div class="social">
+                <a href="https://www.facebook.com/vikivukev"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/viktorvukev/"><i class="bi bi-instagram"></i></a>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+        </div>
+
+      </div>
+    </section><!-- End Our Team Section -->
+
+    <!-- ======= Pricing Section ======= -->
+    <section id="pricing" class="pricing sections-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Цена</h2>
+          <p>Избери тип игра 60, 90, 120 минути, след това попълни формуляра и ние ще калкулираме цената. Колкото по-голям е твоят отбор, толкова по-изгодно играеш!</p>
+        </div>
+
+        <div class="row g-4 py-lg-5" data-aos="zoom-out" data-aos-delay="100">
+
+          <div class="col-lg-4">
+            <div class="pricing-item">
+              <h3>Скоростна</h3>
+              <div class="icon">
+                <i class="fa-solid fa-gauge-high"></i>
+              </div>
+              <h4>60 минути</h4>
+              <ul>
+                <li class="justify-center">5 или 6 загадки</li>
+              </ul>
+              <div class="text-center"><a [routerLink]="['/check-price']" [queryParams]="{ duration: '60'}" class="buy-btn">Избери</a></div>
+            </div>
+          </div><!-- End Pricing Item -->
+
+          <div class="col-lg-4">
+            <div class="pricing-item featured">
+              <h3>Стандартна</h3>
+              <div class="icon">
+                <i class="fa-solid fa-fire"></i>
+              </div>
+
+              <h4>90 минути</h4>
+              <ul>
+                <li class="justify-center">7 или 8 загадки</li>
+              </ul>
+              <div class="text-center"><a [routerLink]="['/check-price']" [queryParams]="{ duration: '90'}" class="buy-btn">Избери</a></div>
+            </div>
+          </div><!-- End Pricing Item -->
+
+          <div class="col-lg-4">
+            <div class="pricing-item">
+              <h3>Предизвикателна</h3>
+              <div class="icon">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+              </div>
+              <h4>120 минути</h4>
+              <ul>
+                <li class="justify-center">9 или 10 загадки</li>
+              </ul>
+              <div class="text-center"><a [routerLink]="['/check-price']" [queryParams]="{ duration: '120'}" class="buy-btn">Избери</a></div>
+            </div>
+          </div><!-- End Pricing Item -->
+
+        </div>
+
+      </div>
+    </section><!-- End Pricing Section -->
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4">
+            <div class="content px-xl-5">
+              <h3>Често задавани <strong>въпроси</strong></h3>
+              <p>
+                Отговаряме на въпросите, които зададоха нашите клиенти. Надяваме се те да ти помогнат, но в противен случай не забравяй, че можеш да се свържеш с нас по всяко време.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-8">
+
+            <div class="accordion accordion-flush" id="faqlist" data-aos="fade-up" data-aos-delay="100">
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
+                    <span class="num">1.</span>
+                    Какво е градска ескейп игра/градски куест?
+                  </button>
+                </h3>
+                <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body">
+                    Ти и твоят отбор имате задачата да разплетете някоя тайна история. За целта решавате загадки като всяка от тях се крие на някое място в града. Състезаваш се и с други отбори като тук печелят не само най-бързите, но и най-досетливите.
+                  </div>
+                </div>
+              </div><!-- # Faq item-->
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
+                    <span class="num">2.</span>
+                    Колко е минималният/максималният брой хора, които могат да участват?
+                  </button>
+                </h3>
+                <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body">
+                    Минималният брой за самостоятелна игра е 6 човека, тоест 2 отбора по 3 човека. Ако ти си индивидуален играч, свържи се с нас, за да получиш информация за предстоящи куестове, където ще можеш да се запознаеш с други ентусиасти.
+Максимален брой за сега няма. Ако някой ден прегреем, ще се ограничим. 😉
+
+                  </div>
+                </div>
+              </div><!-- # Faq item-->
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
+                    <span class="num">3.</span>
+                    Подходящи ли са игрите за детски рожден ден?
+                  </button>
+                </h3>
+                <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body">
+                    Няма по-забавен и запомнящ се рожден ден от ескейп игра. Ще се постараем да фокусираме играта максимално към вашия рожденик, за да го зарадвате с нещо индивидуално. С оглед на безопасност, игрите за по-малките ентусиасти могат да се проведат в ограничено пространство – обадете ни се, за да изберем най-подходящото. 
+                  </div>
+                </div>
+              </div><!-- # Faq item-->
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-4">
+                    <span class="num">4.</span>
+                    От какво имам нужда, за да участвам в игра?
+                  </button>
+                </h3>
+                <div id="faq-content-4" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body">
+                    Добро настроение, хъс за победа и сплотен отбор. Също така мобилен телефон с добра интернет връзка. Определени игри е възможно да бъдат модифицирани, така че да не се използва мобилно устройство.
+                  </div>
+                </div>
+              </div><!-- # Faq item-->
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Frequently Asked Questions Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Свържи се с нас</h2>
+          <p>Ще отговорим на всеки един твои въпрос с радост, а също така ще очакваме и твоята обратна връзка</p>
+        </div>
+
+        <div class="row gx-lg-0 gy-4">
+
+          <div class="col-lg-4">
+
+            <div class="info-container d-flex flex-column align-items-center justify-content-center">
+              <div class="info-item d-flex">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h4>Локация:</h4>
+                  <p>град Пазарджик - почти навсякъде</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h4>Email:</h4>
+                  <p>gameofclues.pz@gmail.com</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex">
+                <i class="bi bi-instagram flex-shrink-0"></i>
+                <div>
+                  <h4>Instagram:</h4>
+                  <p>@game_of_clues</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex">
+                <i class="bi bi-facebook flex-shrink-0"></i>
+                <div>
+                  <h4>Facebook:</h4>
+                  <p>Игра на Улики (@gameofclues.pz)</p>
+                </div>
+              </div><!-- End Info Item -->
+            </div>
+
+          </div>
+
+          <div class="col-lg-8">
+            <form [formGroup]="contactForm" (ngSubmit)="send()" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input formControlName="name" type="text" name="name" class="form-control" id="name" placeholder="Как се казваш?">
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input formControlName="email" type="email" class="form-control" name="email" id="email" placeholder="Какъв е email адресът ти?">
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input formControlName="title" type="text" class="form-control" name="subject" id="subject" placeholder="За какво ни пишеш?">
+              </div>
+              <div class="form-group mt-3">
+                <textarea formControlName="message" class="form-control" name="message" rows="7" placeholder="Излей си душата тук: "></textarea>
+              </div>
+              <div class="text-center"><button type="submit">Давай пращай!</button></div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->

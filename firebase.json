@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/geme-of-clues",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
