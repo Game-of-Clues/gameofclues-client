@@ -30,6 +30,7 @@
           </div>
         </form>
         <h4 class="text-center margin-top-1rem" *ngIf="!hidden">Предизвикателство на цена {{ price }} лв.</h4>
+        <h4 class="text-center text-danger margin-top-1rem" *ngIf="error">Участниците трябва да бъдат най-малко 6.</h4>
           <div class="text-center" *ngIf="!hidden">
             <a [routerLink]="['/reservation']" [queryParams]="{ duration: duration, people: people, type: type }"><button class="pricing-form-button" type="button">Резервирай</button></a>
           </div>

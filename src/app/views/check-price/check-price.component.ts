@@ -13,17 +13,18 @@ export class CheckPriceComponent implements OnInit {
   people: number | undefined;
   type: string | undefined;
   hidden: boolean = true;
+  error: boolean = false;
   checkPriceForm: FormGroup;
   price: number | undefined;
 
   constructor(private fb: FormBuilder, private router: Router, private http: HttpClient, private route: ActivatedRoute) {
     this.checkPriceForm = this.fb.group({
       duration: ['', Validators.required],
-      people: ['', Validators.required],
+      people: ['', Validators.required, Validators.min(6)],
       type: ['', Validators.required]
     })
   }
-  
+
 
   ngOnInit(): void {
     this.route.queryParams
@@ -41,15 +42,21 @@ export class CheckPriceComponent implements OnInit {
       });
     }
 
-    this.price = calculatePrice(value);
-    this.hidden = false;
+    if (value.people >= 6) {
+      this.price = calculatePrice(value);
+      this.hidden = false;
 
-    console.log(`Total price: ${this.price}`);
+      console.log(`Total price: ${this.price}`);
 
-    this.people = +value.people;
-    this.type = value.type;
-    
-    this.checkPriceForm.reset();
+      this.people = +value.people;
+      this.type = value.type;
+
+      this.checkPriceForm.reset();
+    } else {
+      this.checkPriceForm.reset();
+      this.hidden = true;
+      this.error = true;
+    }
   }
 }
 
