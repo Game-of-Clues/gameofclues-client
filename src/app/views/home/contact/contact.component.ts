@@ -1,14 +1,14 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {Router} from "@angular/router";
+import {HttpClient} from "@angular/common/http";
 
 @Component({
-  selector: 'app-index',
-  templateUrl: './index.component.html',
-  styleUrls: ['./index.component.css']
+  selector: 'app-contact',
+  templateUrl: './contact.component.html',
+  styleUrls: ['./contact.component.css']
 })
-export class IndexComponent implements OnInit {
+export class ContactComponent implements OnInit {
   contactForm: FormGroup;
 
   constructor(private fb: FormBuilder, private router: Router, private http: HttpClient) {
@@ -40,7 +40,7 @@ export class IndexComponent implements OnInit {
     console.log(value);
     if (this.contactForm.valid) {
       this.http.post("contact.php", "nikistoyanov2005@gmail.com").subscribe();
-  }
+    }
 
     this.contactForm.reset();
   }
