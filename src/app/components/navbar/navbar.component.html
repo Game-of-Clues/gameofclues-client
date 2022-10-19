@@ -1,0 +1,31 @@
+<div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+  <a href="/" class="logo d-flex align-items-center">
+    <img src="assets/img/logo.svg" class="" alt="">
+  </a>
+  <nav id="navbar" class="navbar">
+    <ul>
+      <li><a href="#home">Начало</a></li>
+      <li><a href="#about">За нас</a></li>
+      <li><a href="#team">Екип</a></li>
+      <li><a href="#pricing">Цена</a></li>
+      <li><a href="#contact">Контакти</a></li>
+      <li *ngIf="!isAuthenticated">
+        <a [routerLink]="['/login']">
+          Влез
+        </a>
+      </li>
+
+      <li *ngIf="isAuthenticated">
+        <a [routerLink]="['/']">
+          Табло
+        </a>
+      </li>
+      <a href="#reserve-now"><button class="btn-reservations">Резервации</button></a>
+    </ul>
+  </nav>
+
+  <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+  <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+</div>
+
