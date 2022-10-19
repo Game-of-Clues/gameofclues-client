@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
 import {HttpClient} from "@angular/common/http";
+import {FaqService} from "../../../services/faq/faq.service";
+import {EmailService} from "../../../services/email/email.service";
 
 @Component({
   selector: 'app-contact',
@@ -11,7 +13,7 @@ import {HttpClient} from "@angular/common/http";
 export class ContactComponent implements OnInit {
   contactForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private router: Router, private http: HttpClient) {
+  constructor(private emailService: EmailService, private fb: FormBuilder, private router: Router, private http: HttpClient) {
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', Validators.required],
@@ -37,7 +39,7 @@ export class ContactComponent implements OnInit {
 
   send(){
     let value = this.contactForm.value;
-    console.log(value);
+
     if (this.contactForm.valid) {
       this.http.post("contact.php", "nikistoyanov2005@gmail.com").subscribe();
     }

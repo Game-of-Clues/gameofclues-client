@@ -16,62 +16,20 @@
 
         <div class="accordion accordion-flush" id="faqlist" data-aos="fade-up" data-aos-delay="100">
 
-          <div class="accordion-item">
+          <div class="accordion-item" *ngFor="let faq of faqs; let i = index">
             <h3 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
-                <span class="num">1.</span>
-                Какво е градска ескейп игра/градски куест?
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#faq-content-' + faq._id">
+                <span class="num">{{i + 1}}.</span>
+                {{ faq.questions }}
               </button>
             </h3>
-            <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+            <div id="faq-content-{{faq._id}}" class="accordion-collapse collapse" data-bs-parent="#faqlist">
               <div class="accordion-body">
-                Ти и твоят отбор имате задачата да разплетете някоя тайна история. За целта решавате загадки като всяка от тях се крие на някое място в града. Състезаваш се и с други отбори като тук печелят не само най-бързите, но и най-досетливите.
+                {{ faq.answer }}
               </div>
             </div>
           </div>
 
-          <div class="accordion-item">
-            <h3 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
-                <span class="num">2.</span>
-                Колко е минималният/максималният брой хора, които могат да участват?
-              </button>
-            </h3>
-            <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-              <div class="accordion-body">
-                Минималният брой за самостоятелна игра е 6 човека, тоест 2 отбора по 3 човека. Ако ти си индивидуален играч, свържи се с нас, за да получиш информация за предстоящи куестове, където ще можеш да се запознаеш с други ентусиасти.
-                Максимален брой за сега няма. Ако някой ден прегреем, ще се ограничим. 😉
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h3 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
-                <span class="num">3.</span>
-                Подходящи ли са игрите за детски рожден ден?
-              </button>
-            </h3>
-            <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-              <div class="accordion-body">
-                Няма по-забавен и запомнящ се рожден ден от ескейп игра. Ще се постараем да фокусираме играта максимално към вашия рожденик, за да го зарадвате с нещо индивидуално. С оглед на безопасност, игрите за по-малките ентусиасти могат да се проведат в ограничено пространство – обадете ни се, за да изберем най-подходящото.
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h3 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-4">
-                <span class="num">4.</span>
-                От какво имам нужда, за да участвам в игра?
-              </button>
-            </h3>
-            <div id="faq-content-4" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-              <div class="accordion-body">
-                Добро настроение, хъс за победа и сплотен отбор. Също така мобилен телефон с добра интернет връзка. Определени игри е възможно да бъдат модифицирани, така че да не се използва мобилно устройство.
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>

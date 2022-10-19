@@ -1,3 +1,5 @@
+<app-header></app-header>
+
 <section class="sample-page">
     <div class="container" data-aos="fade-up">
       <div class="col-lg-12">
@@ -7,7 +9,7 @@
         <form [formGroup]="checkPriceForm" (ngSubmit)="check()" method="post">
           <div class="row">
             <div class="col-md-6 form-group">
-              <select name="duration" id="duration" form="carform" class="form-control" placeholder="Времетраене: " formControlName="duration">
+              <select name="duration" id="duration" class="form-control" placeholder="Времетраене: " formControlName="duration">
                 <option value="" disabled selected>Колко време ще отделиш?</option>
                 <option value="60" [attr.selected]="duration == 60 ? true : null">Скоростна 🏃🏻 (60 минути)</option>
                 <option value="90" [attr.selected]="duration == 90 ? true : null">Стандартна 😀 (90 минути)</option>
@@ -19,7 +21,7 @@
             </div>
           </div>
           <div class="form-group mt-3">
-            <select name="type" id="type" form="carform" class="form-control" placeholder="Времетраене: " formControlName="type">
+            <select name="type" id="type" class="form-control" placeholder="Времетраене: " formControlName="type">
               <option value="" disabled selected>Коя игра ще избереш?</option>
               <option value="prepared">Готова игра</option>
               <option value="custom">Игра на моя тема (доп. заплащане)</option>
