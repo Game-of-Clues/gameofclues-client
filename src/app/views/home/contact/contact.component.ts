@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
 import {HttpClient} from "@angular/common/http";
-import {FaqService} from "../../../services/faq/faq.service";
-import {EmailService} from "../../../services/email/email.service";
+import {ContactService} from "../../../services/contact/contact.service";
 
 @Component({
   selector: 'app-contact',
@@ -13,12 +12,12 @@ import {EmailService} from "../../../services/email/email.service";
 export class ContactComponent implements OnInit {
   contactForm: FormGroup;
 
-  constructor(private emailService: EmailService, private fb: FormBuilder, private router: Router, private http: HttpClient) {
+  constructor(private contactService: ContactService, private fb: FormBuilder, private router: Router, private http: HttpClient) {
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', Validators.required],
-      title: ['', Validators.required],
-      message: ['', Validators.required]
+      subject: ['', Validators.required],
+      content: ['', Validators.required]
     })
   }
 
@@ -29,19 +28,19 @@ export class ContactComponent implements OnInit {
   get email(){
     return this.contactForm.get('email');
   }
-  get title(){
-    return this.contactForm.get('title');
+  get subject(){
+    return this.contactForm.get('subject');
   }
 
-  get message(){
-    return this.contactForm.get('message');
+  get content(){
+    return this.contactForm.get('content');
   }
 
   send(){
     let value = this.contactForm.value;
 
     if (this.contactForm.valid) {
-      this.http.post("contact.php", "nikistoyanov2005@gmail.com").subscribe();
+      this.contactService.send(value);
     }
 
     this.contactForm.reset();
