@@ -21,6 +21,7 @@ import { LoginComponent } from './views/auth/login/login.component';
 import { HeaderComponent } from './components/header/header.component';
 import {FaqService} from "./services/faq/faq.service";
 import {EmailService} from "./services/email/email.service";
+import { DashboardComponent } from './views/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {EmailService} from "./services/email/email.service";
     FaqComponent,
     ContactComponent,
     LoginComponent,
-    HeaderComponent
+    HeaderComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
