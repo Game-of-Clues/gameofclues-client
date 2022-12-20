@@ -4,13 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IndexComponent } from './views/home/index/index.component';
-import { ReservationComponent } from './views/reservation/reservation.component';
+import { ReservationComponent } from './views/reservation/reservation/reservation.component';
 import { CheckPriceComponent } from './views/check-price/check-price.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { TeamComponent } from './views/home/team/team.component';
-import { PricingComponent } from './views/home/pricing/pricing.component';
-import { PortfolioComponent } from './views/home/portfolio/portfolio.component';
 import { FaqComponent } from './views/home/faq/faq.component';
 import { ContactComponent } from './views/home/contact/contact.component';
 import {TokenInterceptorService} from "./services/token-interceptor/token-interceptor.service";
@@ -22,6 +20,13 @@ import { HeaderComponent } from './components/header/header.component';
 import {FaqService} from "./services/faq/faq.service";
 import {EmailService} from "./services/email/email.service";
 import { DashboardComponent } from './views/dashboard/dashboard.component';
+import { DetailsComponent } from './views/game/details/details.component';
+import { RegisterComponent } from './views/auth/register/register.component';
+import { LastComponent } from './views/game/last/last.component';
+import { AllComponent } from './views/game/all/all.component';
+import { DurationComponent } from './views/reservation/duration/duration.component';
+import { PlayersComponent } from './views/reservation/players/players.component';
+import { InformationComponent } from './views/reservation/information/information.component';
 
 @NgModule({
   declarations: [
@@ -30,13 +35,18 @@ import { DashboardComponent } from './views/dashboard/dashboard.component';
     ReservationComponent,
     CheckPriceComponent,
     TeamComponent,
-    PricingComponent,
-    PortfolioComponent,
     FaqComponent,
     ContactComponent,
     LoginComponent,
     HeaderComponent,
-    DashboardComponent
+    DashboardComponent,
+    DetailsComponent,
+    RegisterComponent,
+    LastComponent,
+    AllComponent,
+    DurationComponent,
+    PlayersComponent,
+    InformationComponent
   ],
   imports: [
     BrowserModule,

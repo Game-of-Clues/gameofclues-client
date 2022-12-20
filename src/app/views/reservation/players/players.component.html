@@ -1,0 +1,25 @@
+<app-header></app-header>
+
+<section id="pricing" class="pricing sections-bg">
+  <div class="container" data-aos="fade-up">
+    <div class="section-header">
+      <h2>Резервация: Брой играчи</h2>
+      <p>Избери колко хора ще участвате</p>
+    </div>
+
+      <div class="col-lg-12">
+        <div class="wrapper">
+          <button class="plusminus" (click)="handleMinus()">-</button>
+          <input type="number" class="num" value="0" [(ngModel)]="value" />
+          <button class="plusminus" (click)="handlePlus()">+</button>
+        </div>
+      </div>
+
+      <div class="col-lg-12">
+        <div class="btn-continue">
+          <a [routerLink]="['/reservation/information']"><button class="btn-reservations">Давай напред!</button></a>
+        </div>
+      </div>
+    </div>
+</section>
+

@@ -7,8 +7,8 @@
       <ul>
         <li><a href="#home">Начало</a></li>
         <li><a href="#about">За нас</a></li>
+        <li><a href="#portfolio">Игри</a></li>
         <li><a href="#team">Екип</a></li>
-        <li><a href="#pricing">Цена</a></li>
         <li><a href="#contact">Контакти</a></li>
         <li *ngIf="!isAuthenticated">
           <a [routerLink]="['/login']">
@@ -21,7 +21,7 @@
             Табло
           </a>
         </li>
-        <a href="#reserve-now"><button class="btn-reservations">Резервации</button></a>
+        <a [routerLink]="['/reservation']"><button class="btn-reservations">Резервирай</button></a>
       </ul>
     </nav>
 

@@ -1,0 +1,53 @@
+<app-header></app-header>
+
+<section id="pricing" class="pricing sections-bg">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-header">
+      <h2>Резервация: Допълнителна информация</h2>
+      <p>Ще са ни необходими още малко детайли за твоята резервация!</p>
+    </div>
+
+    <form  method="post">
+      <div class="col-lg-12">
+
+
+        <h3 class="margin-top-1rem">Дата и час</h3>
+
+        <div class="col-lg-12">
+
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <input type="date" class="form-control" id="date" name="date" formControlName="date">
+            </div>
+            <div class="col-md-6 form-group">
+              <input type="time" class="form-control" id="time" name="time" required formControlName="time">
+            </div>
+          </div>
+        </div>
+
+
+        <h3 class="margin-top-1rem">Лични данни</h3>
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-md-12 form-group mt-3 mt-md-0">
+              <input type="name" class="form-control" name="name" id="name" placeholder="Как се казваш?" required formControlName="name">
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-6 form-group mt-3 mt-md-0">
+              <input type="phone" class="form-control" name="phone" id="phone" placeholder="Телефонен номер "
+                     required formControlName="phoneNumber">
+            </div>
+            <div class="col-md-6 form-group mt-3 mt-md-0">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Дай ни един email"
+                     required formControlName="email">
+            </div>
+          </div>
+          <div class="text-center"><button class="pricing-form-button" type="submit">Запази</button></div>
+        </div>
+      </div>
+    </form>
+
+  </div>
+</section>

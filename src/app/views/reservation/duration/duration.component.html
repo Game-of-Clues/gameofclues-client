@@ -1,0 +1,57 @@
+<app-header></app-header>
+
+<section id="pricing" class="pricing sections-bg">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-header">
+      <h2>Резервация: Избери продължителност</h2>
+      <p>Избери тип игра 60, 90, 120 минути, след това попълни формуляра и ние ще калкулираме цената. Колкото по-голям е твоят отбор, толкова по-изгодно играеш!</p>
+    </div>
+
+    <div class="row g-4 py-lg-5" data-aos="zoom-out" data-aos-delay="100">
+
+      <div class="col-lg-4">
+        <div class="pricing-item">
+          <h3>Скоростна</h3>
+          <div class="icon">
+            <i class="fa-solid fa-gauge-high"></i>
+          </div>
+          <h4>60 минути</h4>
+          <ul>
+            <li class="justify-center">5 или 6 загадки</li>
+          </ul>
+          <div class="text-center"><a [routerLink]="['/reservation/players']" [queryParams]="{ duration: '60'}" class="buy-btn">Избери</a></div>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="pricing-item featured">
+          <h3>Стандартна</h3>
+          <div class="icon">
+            <i class="fa-solid fa-fire"></i>
+          </div>
+
+          <h4>90 минути</h4>
+          <ul>
+            <li class="justify-center">7 или 8 загадки</li>
+          </ul>
+          <div class="text-center"><a [routerLink]="['/reservation/players']" [queryParams]="{ duration: '90'}" class="buy-btn">Избери</a></div>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="pricing-item">
+          <h3>Предизвикателна</h3>
+          <div class="icon">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </div>
+          <h4>120 минути</h4>
+          <ul>
+            <li class="justify-center">9 или 10 загадки</li>
+          </ul>
+          <div class="text-center"><a [routerLink]="['/reservation/players']" [queryParams]="{ duration: '120'}" class="buy-btn">Избери</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

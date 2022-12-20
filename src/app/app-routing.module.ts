@@ -2,9 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CheckPriceComponent } from './views/check-price/check-price.component';
 import { IndexComponent } from './views/home/index/index.component';
-import { ReservationComponent } from './views/reservation/reservation.component';
+import { ReservationComponent } from './views/reservation/reservation/reservation.component';
 import {LoginComponent} from "./views/auth/login/login.component";
 import {DashboardComponent} from "./views/dashboard/dashboard.component";
+import {DetailsComponent} from "./views/game/details/details.component";
+import {DurationComponent} from "./views/reservation/duration/duration.component";
+import {PlayersComponent} from "./views/reservation/players/players.component";
+import {InformationComponent} from "./views/reservation/information/information.component";
 
 const routes: Routes = [
    // home page
@@ -15,7 +19,15 @@ const routes: Routes = [
 
    { path: 'reservation', component: ReservationComponent },
 
-   { path: 'check-price', component: CheckPriceComponent }
+   { path: 'check-price', component: CheckPriceComponent },
+
+   { path: 'game/details', component: DetailsComponent },
+
+   { path: 'reservation/duration', component: DurationComponent },
+
+   { path: 'reservation/players', component: PlayersComponent },
+
+   { path: 'reservation/information', component: InformationComponent }
 ];
 
 @NgModule({
