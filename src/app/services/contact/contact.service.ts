@@ -7,7 +7,7 @@ import {Router} from "@angular/router";
   providedIn: 'root'
 })
 export class ContactService {
-  private contactPath = environment.apiUrl + 'contact'
+  private contactPath = environment.apiUrl + 'contact-us'
   constructor(private http: HttpClient, private router: Router) { }
 
   send(data: any) {

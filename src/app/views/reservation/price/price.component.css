@@ -1,9 +1,18 @@
+h2 {
+  font-size: 50px;
+}
+
 .btn-continue {
+
   margin: 0 auto;
   width: 40vw;
   height: 50px;
   padding: 30px;
-  display: flex;
+  display: inline;
+}
+
+.btn-next {
+  background-color: #008374;
 }
 
 .btn-continue a {

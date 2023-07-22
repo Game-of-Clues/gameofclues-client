@@ -9,48 +9,49 @@ import {Router} from '@angular/router';
   providedIn: 'root'
 })
 export class AuthService {
-  private loginPath = environment.apiUrl + 'login'
-  private registerPath = environment.apiUrl + 'register'
+  private registedPath = environment.apiUrl + 'auth/register';
+  private loginPath = environment.apiUrl + 'auth/login';
+
   constructor(private http: HttpClient, private router: Router, private cookies: CookieService) { }
 
+  register(data: any): Observable<any> {
+    return this.http.post(this.registedPath, data);
+  }
+
   login(data: any): Observable<any> {
-    return this.http.post(this.loginPath, data)
+    console.log(this.loginPath);
+    console.log(data);
+    return this.http.post(this.loginPath, data);
   }
 
   logout() {
     this.cookies.delete('auth');
-
     this.router.navigate(['/']);
   }
 
-  register(data: any): Observable<any> {
-    return this.http.post(this.registerPath, data)
-  }
-
-  saveToken(token: any) {
-    console.log(token);
-    document.cookie = `auth=${token}`;
-  }
-
   getToken() {
-    let ca: Array<string> = document.cookie.split(';');
-    let caLen: number = ca.length;
-    let cookieName = `auth=`;
-    let c: string;
+    let cookies = document.cookie.split(';');
 
-    for (let i: number = 0; i < caLen; i += 1) {
-      c = ca[i].replace(/^\s+/g, '');
-      if (c.indexOf(cookieName) == 0) {
-        return c.substring(cookieName.length, c.length);
+    for (let cookie of cookies) {
+      console.log(cookie);
+      if (cookie.startsWith('auth=')) {
+        return cookie.slice(5);
       }
     }
+
     return '';
   }
 
-  isAuthenticated() {
-    if (this.getToken()) {
+  isAuthenticated()
+  {
+    if(this.getToken())
+    {
       return true;
     }
     return false;
+  }
+
+  saveToken(token: any) {
+    document.cookie = `auth=${token}`;
   }
 }

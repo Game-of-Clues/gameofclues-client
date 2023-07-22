@@ -9,13 +9,16 @@ import {DetailsComponent} from "./views/game/details/details.component";
 import {DurationComponent} from "./views/reservation/duration/duration.component";
 import {PlayersComponent} from "./views/reservation/players/players.component";
 import {InformationComponent} from "./views/reservation/information/information.component";
+import {CreateComponent} from "./views/game/create/create.component";
+import {AuthGuardService} from "./services/auth-guard/auth-guard.service";
+import {PriceComponent} from "./views/reservation/price/price.component";
 
 const routes: Routes = [
    // home page
    { path: '', component: IndexComponent },
    { path: 'dashboard', component: DashboardComponent },
 
-   { path: 'login', component: LoginComponent },
+   { path: 'auth/login', component: LoginComponent },
 
    { path: 'reservation', component: ReservationComponent },
 
@@ -23,9 +26,13 @@ const routes: Routes = [
 
    { path: 'game/details', component: DetailsComponent },
 
+   { path: 'game/create', component: CreateComponent, canActivate: [AuthGuardService] },
+
    { path: 'reservation/duration', component: DurationComponent },
 
    { path: 'reservation/players', component: PlayersComponent },
+
+   { path: 'reservation/price', component: PriceComponent },
 
    { path: 'reservation/information', component: InformationComponent }
 ];

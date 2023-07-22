@@ -9,32 +9,26 @@ import {Router} from "@angular/router";
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  loginForm: FormGroup
+  loginForm: FormGroup;
+
   constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) {
     this.loginForm = this.fb.group({
-      'email': ['', [Validators.required]],
+      'email': ['', Validators.required],
       'password': ['', Validators.required]
     })
   }
 
-  ngOnInit(): void {}
-
   login() {
     this.authService.login(this.loginForm.value).subscribe(data => {
-      console.log(data)
-      let user = data['user'];
-
-      console.log(user);
-      this.authService.saveToken(user['_id']);
-      this.router.navigate(['/']);
+      console.log(data);
+      if (data.token) {
+        this.authService.saveToken(data.token);
+        this.router.navigate(['']);
+      } else {
+        console.log(data.error);
+      }
     })
-  }
 
-  get email() {
-    return this.loginForm.get('email');
   }
-
-  get password() {
-    return this.loginForm.get('password');
-  }
+  ngOnInit(): void {}
 }

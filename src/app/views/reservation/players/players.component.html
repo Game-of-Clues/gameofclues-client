@@ -10,14 +10,14 @@
       <div class="col-lg-12">
         <div class="wrapper">
           <button class="plusminus" (click)="handleMinus()">-</button>
-          <input type="number" class="num" value="0" [(ngModel)]="value" />
+          <input type="number" class="num" value="0" [(ngModel)]="players" />
           <button class="plusminus" (click)="handlePlus()">+</button>
         </div>
       </div>
 
       <div class="col-lg-12">
         <div class="btn-continue">
-          <a [routerLink]="['/reservation/information']"><button class="btn-reservations">Давай напред!</button></a>
+          <a [routerLink]="['/reservation/price']" [queryParams]="{ id: id, duration: 60, players: players}"><button class="btn-reservations">Давай напред!</button></a>
         </div>
       </div>
     </div>

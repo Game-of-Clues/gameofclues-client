@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-duration',
@@ -6,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./duration.component.css']
 })
 export class DurationComponent implements OnInit {
+  id: string = '';
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) {
+    this.route.queryParams.subscribe(res => {
+      this.id = res['id'];
+    });
+  }
 
   ngOnInit(): void {
   }

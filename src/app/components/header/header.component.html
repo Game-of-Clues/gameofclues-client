@@ -11,7 +11,7 @@
         <li><a href="#team">Екип</a></li>
         <li><a href="#contact">Контакти</a></li>
         <li *ngIf="!isAuthenticated">
-          <a [routerLink]="['/login']">
+          <a [routerLink]="['/auth/login']">
             Влез
           </a>
         </li>

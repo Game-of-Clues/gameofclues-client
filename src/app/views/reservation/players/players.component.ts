@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-players',
@@ -6,21 +7,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./players.component.css']
 })
 export class PlayersComponent implements OnInit {
+  id: string = '';
+  duration: number = 0;
+  players: number = 6;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) {
+    this.route.queryParams.subscribe(res => {
+      this.id = res['id'];
+      this.duration = res['duration'];
+    });
+  }
 
   ngOnInit(): void {
   }
 
-  value = 6;
-
   handleMinus() {
-    if (this.value > 6) {
-      this.value--;
+    if (this.players > 6) {
+      this.players--;
     }
   }
   handlePlus() {
-    this.value++;
+    this.players++;
   }
 
 }

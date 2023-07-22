@@ -27,6 +27,8 @@ import { AllComponent } from './views/game/all/all.component';
 import { DurationComponent } from './views/reservation/duration/duration.component';
 import { PlayersComponent } from './views/reservation/players/players.component';
 import { InformationComponent } from './views/reservation/information/information.component';
+import { CreateComponent } from './views/game/create/create.component';
+import { PriceComponent } from './views/reservation/price/price.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import { InformationComponent } from './views/reservation/information/informatio
     AllComponent,
     DurationComponent,
     PlayersComponent,
-    InformationComponent
+    InformationComponent,
+    CreateComponent,
+    PriceComponent
   ],
   imports: [
     BrowserModule,
