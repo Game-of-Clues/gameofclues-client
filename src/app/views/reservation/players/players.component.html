@@ -7,17 +7,21 @@
       <p>Избери колко хора ще участвате</p>
     </div>
 
-      <div class="col-lg-12">
-        <div class="wrapper">
-          <button class="plusminus" (click)="handleMinus()">-</button>
-          <input type="number" class="num" value="0" [(ngModel)]="players" />
-          <button class="plusminus" (click)="handlePlus()">+</button>
-        </div>
+    <div class="count">
+      <div class="minus" (click)="handleMinus()">
+        -
       </div>
+      <div>
+        <input value="1" [(ngModel)]="players">
+      </div>
+      <div class="plus" (click)="handlePlus()">
+        +
+      </div>
+    </div>
 
       <div class="col-lg-12">
         <div class="btn-continue">
-          <a [routerLink]="['/reservation/price']" [queryParams]="{ id: id, duration: 60, players: players}"><button class="btn-reservations">Давай напред!</button></a>
+          <button (click)="continue()" class="btn-reservations">Давай напред!</button>
         </div>
       </div>
     </div>

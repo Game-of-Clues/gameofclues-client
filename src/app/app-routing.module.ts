@@ -12,6 +12,7 @@ import {InformationComponent} from "./views/reservation/information/information.
 import {CreateComponent} from "./views/game/create/create.component";
 import {AuthGuardService} from "./services/auth-guard/auth-guard.service";
 import {PriceComponent} from "./views/reservation/price/price.component";
+import { ConfirmationComponent } from './views/reservation/confirmation/confirmation.component';
 
 const routes: Routes = [
    // home page
@@ -33,6 +34,8 @@ const routes: Routes = [
    { path: 'reservation/players', component: PlayersComponent },
 
    { path: 'reservation/price', component: PriceComponent },
+
+   { path: 'reservation/confirmation', component: ConfirmationComponent },
 
    { path: 'reservation/information', component: InformationComponent }
 ];

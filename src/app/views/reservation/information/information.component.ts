@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {environment} from "../../../../environments/environment";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {Observable} from "rxjs";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {HttpClient} from "@angular/common/http";
 import {ReservationService} from "../../../services/reservation/reservation.service";
 
@@ -14,7 +14,11 @@ import {ReservationService} from "../../../services/reservation/reservation.serv
 export class InformationComponent implements OnInit {
   reservationForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private route: ActivatedRoute, private http: HttpClient, private reservationService: ReservationService) {
+  constructor(
+    private fb: FormBuilder, 
+    private route: ActivatedRoute, 
+    private router: Router, 
+    private reservationService: ReservationService) {
     this.reservationForm = this.fb.group({
       gameId: ['', Validators.required],
       duration: ['', Validators.required],
@@ -41,6 +45,13 @@ export class InformationComponent implements OnInit {
         value.price = params['price'];
       });
 
-    this.reservationService.create(value).subscribe(res => console.log(res));
+    this.reservationService.create(value).subscribe(res => {
+      console.log(res);
+      
+      this.router.navigate(
+        ['/reservation/confirmation'],
+        { queryParams: { id: res}}
+      );
+    });
   }
 }

@@ -1,55 +1,43 @@
+.count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 input {
+  color: #008374;
+  background-color: transparent;
+  font-size: 50px;
+  font-weight: 700;
+  width: 300px;
+  min-width: 35px;
   text-align: center;
-  border: 1px solid #008374;
-
-}
-
-input[type="number"] {
-  -webkit-appearance: textfield !important;
-  -moz-appearance: textfield !important;
-  appearance: textfield !important;
   outline: none;
+  border: none;
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
+input:focus {
+  border: none;
 }
 
-.wrapper {
-  margin: 0 auto;
-  border: 2px #008374 solid;
-  width: 40vw;
-  height: 100px;
-  padding: 10px;
-  display: flex;
-  border-radius: 15px;
-}
-
-.btn-continue {
-  margin: 0 auto;
-  width: 40vw;
+.plus, .minus {
+  cursor: pointer;
+  background-color: #008374;
+  color: #fff;
+  width: 50px;
   height: 50px;
-  padding: 30px;
-  display: flex;
-}
-
-.btn-continue a {
-  margin: 0 auto;
-}
-
-.plusminus {
-  height: 100%;
-  width: 30%;
-  background: white;
-  border: none;
-  font-size: 40px;
-  color: #f85a40;
-}
-
-.num {
-  height: 100%;
-  width: 39%;
-  border: none;
   font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 50%;
+}
+
+div {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.minus:hover, .plus:hover{
+  background-color: #f85a40;
+  transition: 0.15s ease-in;
 }

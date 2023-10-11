@@ -29,6 +29,7 @@ import { PlayersComponent } from './views/reservation/players/players.component'
 import { InformationComponent } from './views/reservation/information/information.component';
 import { CreateComponent } from './views/game/create/create.component';
 import { PriceComponent } from './views/reservation/price/price.component';
+import { ConfirmationComponent } from './views/reservation/confirmation/confirmation.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { PriceComponent } from './views/reservation/price/price.component';
     PlayersComponent,
     InformationComponent,
     CreateComponent,
-    PriceComponent
+    PriceComponent,
+    ConfirmationComponent
   ],
   imports: [
     BrowserModule,
