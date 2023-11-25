@@ -5,11 +5,11 @@
     </a>
     <nav id="navbar" class="navbar">
       <ul>
-        <li><a href="#home">Начало</a></li>
-        <li><a href="#about">За нас</a></li>
-        <li><a href="#portfolio">Игри</a></li>
-        <li><a href="#team">Екип</a></li>
-        <li><a href="#contact">Контакти</a></li>
+        <li *ngIf="!isAuthenticated"><a href="#home">Начало</a></li>
+        <li *ngIf="!isAuthenticated"><a href="#about">За нас</a></li>
+        <li *ngIf="!isAuthenticated"><a href="#portfolio">Игри</a></li>
+        <li *ngIf="!isAuthenticated"><a href="#team">Екип</a></li>
+        <li *ngIf="!isAuthenticated"><a href="#contact">Контакти</a></li>
         <li *ngIf="!isAuthenticated">
           <a [routerLink]="['/auth/login']">
             Влез
@@ -21,7 +21,12 @@
             Табло
           </a>
         </li>
-        <a [routerLink]="['/reservation']"><button class="btn-reservations">Резервирай</button></a>
+        <li *ngIf="isAuthenticated">
+          <a (click)="logout()">
+            Излез
+          </a>
+        </li>
+        <a  *ngIf="!isAuthenticated" [routerLink]="['/reservation']"><button class="btn-reservations">Резервирай</button></a>
       </ul>
     </nav>
 

@@ -30,6 +30,8 @@ import { InformationComponent } from './views/reservation/information/informatio
 import { CreateComponent } from './views/game/create/create.component';
 import { PriceComponent } from './views/reservation/price/price.component';
 import { ConfirmationComponent } from './views/reservation/confirmation/confirmation.component';
+import { GameService } from './services/game/game.service';
+import { ContactService } from './services/contact/contact.service';
 
 @NgModule({
   declarations: [
@@ -64,6 +66,8 @@ import { ConfirmationComponent } from './views/reservation/confirmation/confirma
   providers: [
     AuthService,
     FaqService,
+    GameService,
+    ContactService,
     EmailService,
     AuthGuardService,
     {

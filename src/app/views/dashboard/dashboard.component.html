@@ -1,1 +1,151 @@
-<p>dashboard works!</p>
+<app-header></app-header>
+
+<main id="main">
+    <section id="reservations" class="faq">
+        <div class="container" data-aos="fade-up">
+            <div class="section-header">
+                <h2>Резервации</h2>
+              </div>
+
+          <div class="row">
+            <div class="accordion accordion-flush" id="faqlist" data-aos="fade-up" data-aos-delay="100">
+      
+                <div class="accordion-item" *ngFor="let reservation of reservations; let i = index">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#faq-content-' + reservation._id">
+                      <span class="num">{{i + 1}}.</span>
+                      {{ reservation.gameId }} на {{ reservation.date}} в {{ reservation.time }} часа.
+                    </button>
+                  </h3>
+                  <div id="faq-content-{{reservation._id}}" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                    <div class="accordion-body">
+                        <p><b>Продължителност:</b> {{ reservation.duration }} минути</p>
+                        <p><b>Участници:</b> {{ reservation.players }}</p>
+                        <p><b>Email:</b> {{ reservation.email }}</p>
+                        <p><b>Телефонен номер:</b> {{ reservation.phoneNumber }}</p>
+                        <p><b>Цена:</b> {{ reservation.price }} лв.</p>
+
+                        <a [routerLink]="['/']"><button class="btn-reservations">Изтрий</button></a>
+                    </div>
+                  </div>
+                </div>
+      
+              </div>
+          </div>
+        </div>
+      </section>
+    <section id="contact" class="faq">
+        <div class="container" data-aos="fade-up">
+            <div class="section-header">
+                <h2>Контактна форма</h2>
+              </div>
+
+          <div class="row">
+            <div class="accordion accordion-flush" id="faqlist" data-aos="fade-up" data-aos-delay="100">
+      
+                <div class="accordion-item" *ngFor="let contact of contacts; let i = index">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#faq-content-' + contact._id">
+                      <span class="num">{{i + 1}}.</span>
+                      {{ contact.subject }}
+                    </button>
+                  </h3>
+                  <div id="faq-content-{{contact._id}}" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                    <div class="accordion-body">
+                        <p><b>От:</b> {{ contact.name }}</p>
+                        <p><b>Email:</b> {{ contact.email }}</p>
+                        <p>{{ contact.content }}</p>
+
+                        <a [routerLink]="['/']"><button class="btn-reservations">Изтрий</button></a>
+                    </div>
+                  </div>
+                </div>
+      
+              </div>
+          </div>
+        </div>
+      </section>
+
+    <section id="portfolio" class="portfolio sections-bg">
+        <div class="container" data-aos="fade-up">
+          <div class="section-header">
+            <h2>Игри</h2>
+            <div class="text-center">
+                <a [routerLink]="['/game/create']" class="pricing-form-button">Добави</a>
+            </div>
+          </div>
+      
+          <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order" data-aos="fade-up" data-aos-delay="100">
+            <div class="row gy-4 portfolio-container">
+              <div class="col-xl-4 col-md-6 portfolio-item"  *ngFor="let game of games;">
+                <div class="portfolio-wrap">
+                  <a [routerLink]="['/game/details']" [queryParams]="{ id: game._id }" title="Виж повече">
+                    <img [src]="game.imageUrl" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <h4>{{ game.name }}</h4>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="team" class="team">
+        <div class="container" data-aos="fade-up">
+          <div class="section-header">
+            <h2>Екип</h2>
+            <div class="text-center">
+                <a [routerLink]="['/team-member/add']" class="pricing-form-button">Добави</a>
+            </div>
+          </div>
+
+          <div class="row gy-3 justify-center">
+            <div class="col-xl-3 col-md-6 d-flex"  *ngFor="let teamMember of teamMembers; let i = index" data-aos="fade-up" [attr.data-aos-delay]="i * 100">
+              <div class="member">
+                <img [src]="teamMember.photoUrl" class="img-fluid" alt="">
+                <h4>{{ teamMember.name }}</h4>
+                <span>{{ teamMember.role }}</span>
+                <div class="social">
+                  <a [routerLink]="['/team-member/edit']"><i class="bi bi-pen"></i></a>
+                  <a [routerLink]="['/team-member/remove']"><i class="bi bi-trash red"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="faq">
+        <div class="container" data-aos="fade-up">
+            <div class="section-header">
+                <h2>Често задавани въпроси</h2>
+                <div class="text-center">
+                    <a [routerLink]="['/faq/add']" class="pricing-form-button">Добави</a>
+                </div>
+              </div>
+
+          <div class="row">
+            <div class="accordion accordion-flush" id="faqlist" data-aos="fade-up" data-aos-delay="100">
+      
+                <div class="accordion-item" *ngFor="let faq of faqs; let i = index">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#faq-content-' + faq._id">
+                      <span class="num">{{i + 1}}.</span>
+                      {{ faq.questions }}
+                      <a [routerLink]="['/game/create']"><i class="bi bi-pen"></i></a>
+                    </button>
+                  </h3>
+                  <div id="faq-content-{{faq._id}}" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                    <div class="accordion-body">
+                      {{ faq.answer }}
+                    </div>
+                  </div>
+                </div>
+      
+              </div>
+          </div>
+        </div>
+      </section>
+</main>

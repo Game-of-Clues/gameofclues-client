@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
 import {HttpClient} from "@angular/common/http";
-import {ContactService} from "../../../services/contact/contact.service";
+import { ContactService } from 'src/app/services/contact/contact.service';
 
 @Component({
   selector: 'app-contact',

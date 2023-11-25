@@ -1,14 +1,19 @@
 import { Injectable } from '@angular/core';
-import {environment} from "../../../environments/environment";
+import {Observable} from "rxjs";
 import {HttpClient} from "@angular/common/http";
-import {Router} from "@angular/router";
+import {environment} from "../../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ContactService {
-  private contactPath = environment.apiUrl + 'contact-us'
-  constructor(private http: HttpClient, private router: Router) { }
+  private contactPath = environment.apiUrl + 'contact';
+
+  constructor(private http: HttpClient) { }
+
+  getAll(): Observable<any> {
+    return this.http.get(this.contactPath);
+  }
 
   send(data: any) {
     this.http.post(this.contactPath, data).subscribe(res => {
